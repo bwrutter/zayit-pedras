@@ -116,7 +116,8 @@ export default {
       this.show[index] = !this.show[index];
     },
     getImage(image) {
-      return `/public/${image}`;
+      //return `/public/${image}`;
+      return `${image}`;
     },
   },
 }
