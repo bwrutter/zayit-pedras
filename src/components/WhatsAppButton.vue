@@ -1,6 +1,6 @@
 <template>
   <v-btn
-    href="https://web.whatsapp.com/send?phone=47920028440&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!"
+    href="https://api.whatsapp.com/send?phone=47920028440&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!"
     target="_blank"
     fab
     color="green"
