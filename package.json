@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vue-cli-service build && echo 'bwrutter.github.io' > dist/CNAME",
     "preview": "vite preview",
     "lint": "eslint . --fix"
   },
