@@ -1,5 +1,5 @@
 <template>
-  <v-row class="mt-2 ml-1 mr-1">
+  <v-row class="ma-1">
     <v-col v-for="(card, index) in cards" :key="index">
       <v-card class="mx-auto" max-width="170">
         <v-img :src="getImage(card.img)" height="250px" cover />
@@ -41,83 +41,13 @@
 </template>
 
 <script>
+import cardsData from '@/content/cards.json';
+
 export default {
   data() {
     return {
       show: [],
-      cards: [
-        {
-          img: 'img-1.jpeg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-2.jpg',
-          title: 'Quartzo',
-          subtitle: 'Quartzo em uma base',
-          description:
-            "Uma quartzo blablabla",
-        },
-        {
-          img: 'img-3.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-4.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-5.jpg',
-          title: 'Quartzo',
-          subtitle: 'Quartzo em uma base',
-          description:
-            "Uma quartzo blablabla",
-        },
-        {
-          img: 'img-6.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-6.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-6.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-6.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-        {
-          img: 'img-6.jpg',
-          title: 'Arvore',
-          subtitle: 'Esmeralda com quartzos',
-          description:
-            "Uma bela arvore que significa xxx",
-        },
-      ],
-
+      cards: cardsData,
     };
   },
   methods: {
@@ -125,12 +55,12 @@ export default {
       this.show[index] = !this.show[index];
     },
     getImage(image) {
-      //return `/public/${image}`;
       return `${image}`;
     },
   },
-}
+};
 </script>
+
 <style scoped>
 .whatsapp-button {
   position: fixed;
