@@ -1,10 +1,8 @@
-
 name: Deploy static content to Pages
 
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -23,14 +21,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout código
         uses: actions/checkout@v4
-      - name: Setup Pages
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Build do projeto
+        run: npm run build
+
+      - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Fazer upload dos arquivos do build
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-      - name: Deploy to GitHub Pages
+          path: "./dist"
+
+      - name: Deploy para GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
