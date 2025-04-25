@@ -11,7 +11,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/zayit-pedras/",
+  // Configure a base URL para a raiz do seu domínio customizado
+  base: "/", // <-- Mude esta linha
   plugins: [
     VueRouter(),
     Vue({
